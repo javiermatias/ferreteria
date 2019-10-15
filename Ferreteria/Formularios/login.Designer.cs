@@ -43,7 +43,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 88);
+            this.pictureBox2.Location = new System.Drawing.Point(61, 84);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(121, 121);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,7 +56,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(139, 28);
+            this.label1.Location = new System.Drawing.Point(189, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 25);
             this.label1.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             this.txtusuario.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtusuario.Location = new System.Drawing.Point(179, 88);
+            this.txtusuario.Location = new System.Drawing.Point(222, 84);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(161, 31);
             this.txtusuario.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             this.txtpass.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtpass.Location = new System.Drawing.Point(179, 135);
+            this.txtpass.Location = new System.Drawing.Point(222, 131);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(161, 31);
@@ -91,7 +91,7 @@
             // 
             // btn_aceptar
             // 
-            this.btn_aceptar.Location = new System.Drawing.Point(179, 181);
+            this.btn_aceptar.Location = new System.Drawing.Point(222, 177);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(75, 32);
             this.btn_aceptar.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.Location = new System.Drawing.Point(260, 181);
+            this.btn_cancelar.Location = new System.Drawing.Point(303, 177);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(80, 32);
             this.btn_cancelar.TabIndex = 6;
@@ -115,7 +115,7 @@
             this.lblactivacion.BackColor = System.Drawing.Color.Transparent;
             this.lblactivacion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblactivacion.ForeColor = System.Drawing.Color.White;
-            this.lblactivacion.Location = new System.Drawing.Point(159, 230);
+            this.lblactivacion.Location = new System.Drawing.Point(193, 239);
             this.lblactivacion.Name = "lblactivacion";
             this.lblactivacion.Size = new System.Drawing.Size(214, 18);
             this.lblactivacion.TabIndex = 7;

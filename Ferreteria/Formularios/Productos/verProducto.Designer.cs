@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(verProducto));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_ordenar = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,9 +41,9 @@
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.pnl_botones = new System.Windows.Forms.Panel();
             this.pnl_grilla = new System.Windows.Forms.Panel();
-            this.grilla_productos = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssmostrar = new System.Windows.Forms.ToolStripStatusLabel();
+            this.grilla_productos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,8 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_botones.SuspendLayout();
             this.pnl_grilla.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grilla_productos)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grilla_productos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,6 +133,7 @@
             this.btn_exportar.Text = "Exportar";
             this.btn_exportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_exportar.UseVisualStyleBackColor = true;
+            this.btn_exportar.Visible = false;
             // 
             // btn_eliminar
             // 
@@ -146,6 +147,7 @@
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
@@ -200,52 +202,6 @@
             this.pnl_grilla.Size = new System.Drawing.Size(829, 383);
             this.pnl_grilla.TabIndex = 16;
             // 
-            // grilla_productos
-            // 
-            this.grilla_productos.AllowUserToAddRows = false;
-            this.grilla_productos.AllowUserToDeleteRows = false;
-            this.grilla_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grilla_productos.BackgroundColor = System.Drawing.Color.White;
-            this.grilla_productos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grilla_productos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grilla_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grilla_productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Codigo,
-            this.Nombre,
-            this.Descripcion,
-            this.Categoria,
-            this.PrecioSinIva,
-            this.PrecioConIVA,
-            this.PrecioVenta,
-            this.Stock,
-            this.Estado,
-            this.Imagen});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grilla_productos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grilla_productos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grilla_productos.GridColor = System.Drawing.SystemColors.Highlight;
-            this.grilla_productos.Location = new System.Drawing.Point(0, 0);
-            this.grilla_productos.MultiSelect = false;
-            this.grilla_productos.Name = "grilla_productos";
-            this.grilla_productos.ReadOnly = true;
-            this.grilla_productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grilla_productos.Size = new System.Drawing.Size(829, 383);
-            this.grilla_productos.TabIndex = 0;
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -262,6 +218,52 @@
             this.tssmostrar.Name = "tssmostrar";
             this.tssmostrar.Size = new System.Drawing.Size(135, 20);
             this.tssmostrar.Text = "Se esta mostrando:";
+            // 
+            // grilla_productos
+            // 
+            this.grilla_productos.AllowUserToAddRows = false;
+            this.grilla_productos.AllowUserToDeleteRows = false;
+            this.grilla_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grilla_productos.BackgroundColor = System.Drawing.Color.White;
+            this.grilla_productos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grilla_productos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grilla_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grilla_productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Codigo,
+            this.Nombre,
+            this.Descripcion,
+            this.Categoria,
+            this.PrecioSinIva,
+            this.PrecioConIVA,
+            this.PrecioVenta,
+            this.Stock,
+            this.Estado,
+            this.Imagen});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grilla_productos.DefaultCellStyle = dataGridViewCellStyle4;
+            this.grilla_productos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grilla_productos.GridColor = System.Drawing.SystemColors.Highlight;
+            this.grilla_productos.Location = new System.Drawing.Point(0, 0);
+            this.grilla_productos.MultiSelect = false;
+            this.grilla_productos.Name = "grilla_productos";
+            this.grilla_productos.ReadOnly = true;
+            this.grilla_productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grilla_productos.Size = new System.Drawing.Size(829, 383);
+            this.grilla_productos.TabIndex = 0;
             // 
             // ID
             // 
@@ -359,9 +361,9 @@
             this.pnl_botones.PerformLayout();
             this.pnl_grilla.ResumeLayout(false);
             this.pnl_grilla.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grilla_productos)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grilla_productos)).EndInit();
             this.ResumeLayout(false);
 
         }

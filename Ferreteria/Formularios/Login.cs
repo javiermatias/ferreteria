@@ -1,4 +1,5 @@
 ﻿
+using Ferreteria.Persistencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace Ferreteria.Formularios
     public partial class Login : Form
     {
 
-        public bool noValido = true;
+        public bool Valido = false;
         int calcularIntentos = 0;
         public Login()
         {
@@ -30,43 +31,28 @@ namespace Ferreteria.Formularios
                 return;
             }
             lblactivacion.Visible = true;
-            lblactivacion.Text = "Activando licencia, aguarde";
+            lblactivacion.Text = "Verificando usuario";
             String usuario = txtusuario.Text.ToString();
             String clave = txtpass.Text.ToString();
-            //if (ActivacionMapper.verificarLicenciaActivada(usuario, clave) == "NO")
-            //{
-                
-            //    if (GestorActivacion.guardarDatosRegistro(usuario, clave))
-            //    {
-            //        lblactivacion.Text = "Licencia correcta";
-            //        MessageBox.Show("Su licencia se activó correctamente.", "Activación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        noValido = false;
-            //        Close();
-            //    }else
-            //    {
-            //        calcularIntentos++;
-            //        mensajeDeError();
 
-            //    }
+            Entidades.Login login = LoginMapper.validar(usuario, clave);
 
-            //}
-            //else
-            //{
-            //    if (calcularIntentos > 3)
-            //    {
-            //        cerrarNoValido();
-            //    }
-            //    mensajeDeError();
-            //    calcularIntentos++;
-                
+            if (login != null) {
+                this.Valido = true;
+                Close();
+            }
+            else
+            {
+                mensajeDeError();
+            }
 
-            //}
+       
         }
 
 
         public void mensajeDeError()
         {
-            MessageBox.Show("Hubo un error al activar el sistema. Contáctese con los administradores", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("El usuario u contraseña es incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             lblactivacion.Visible = false;
 
 
@@ -74,7 +60,7 @@ namespace Ferreteria.Formularios
         public void cerrarNoValido()
         {
 
-            noValido = true;
+            Valido = false;
             Close();
         }
 

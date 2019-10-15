@@ -15,6 +15,8 @@ namespace Ferreteria.Persistencia.Contexto
         public DbSet<Producto> producto { get; set; }
         public DbSet<Categoria> categoria { get; set; }
 
+        public DbSet<Login> login { get; set; }
+
         public FerreteriaContext(): base("name=BDFerreteria") {
             var ensureDLLIsCopied = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
 

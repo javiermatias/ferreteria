@@ -18,6 +18,8 @@ namespace Ferreteria
     public partial class frmPrincipal : Form
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
+        Formularios.Login login;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -26,9 +28,29 @@ namespace Ferreteria
  
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            this.abrirFormLogin();
             this.adaptarPantalla();              
             //cargarDatosPrueba();
         }
+
+        private void abrirFormLogin()
+        {
+
+            Opacity = 0;
+            using (login = new Formularios.Login())
+            {
+                login.ShowDialog();
+                if (!login.Valido)
+                {
+                    MessageBox.Show("Error en el usuario y contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    System.Environment.Exit(1);
+                }
+            }
+            Opacity = 100;
+
+
+        }
+
 
         private void cargarDatosPrueba()
         {
@@ -46,14 +68,14 @@ namespace Ferreteria
 
             //ProductoMapper.grabar(_producto);
 
-            var _categoria = new Categoria()
-            {
-                descripcion = "PINTURAS"
+            //var _categoria = new Categoria()
+            //{
+            //    descripcion = "PINTURAS"
 
 
-            };
+            //};
 
-            CategoriaMapper.grabar(_categoria);
+            //CategoriaMapper.grabar(_categoria);
             // List<Producto> productos = ProductoMapper.devolverTodos();
         }
 

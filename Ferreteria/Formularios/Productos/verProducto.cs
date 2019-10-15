@@ -104,5 +104,10 @@ namespace Ferreteria.Formularios.Productos
 
             cargarGridProductos();
         }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
