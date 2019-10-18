@@ -140,9 +140,51 @@ namespace Ferreteria.Persistencia
 
 
         /// <summary>
+        /// Traer Todos los Productos Ordenados Ascendente
+        /// </summary>
+        /// <returns></returns>
+        //public static List<Producto> devolverTodosOrdenadosAscendente(string filtro)
+        //{
+        //    try
+        //    {
+        //        using (var db = new FerreteriaContext())
+        //        {
+        //            return db.producto.OrderBy(x => x.codProducto.Equals(_codigo))ToList();
+        //            //ADO.NET  select nombre,descripcion from producto where
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.Error(ex, "Ocurrio una excepcion al devolver todos los productos");
+        //    }
+        //    return null;
+        //}
+
+        ///// <summary>
+        ///// Traer Todos los Productos Ordenados Descendete
+        ///// </summary>
+        ///// <returns></returns>
+        //public static List<Producto> devolverTodosOrdenadosDescendente(string filtro)
+        //{
+        //    try
+        //    {
+        //        using (var db = new FerreteriaContext())
+        //        {
+        //            return db.producto.ToList();
+        //            //ADO.NET  select nombre,descripcion from producto where
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.Error(ex, "Ocurrio una excepcion al devolver todos los productos");
+        //    }
+        //    return null;
+        //}
+
+        /// <summary>
         /// Eliminar Producto por su ID.
         /// </summary>
-        public static void eliminar(int _id)
+        public static void eliminar(Int64 _id)
         {
             try
             {

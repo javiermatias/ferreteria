@@ -99,7 +99,7 @@
             this.txt_codigo.MaxLength = 30;
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(198, 27);
-            this.txt_codigo.TabIndex = 1;
+            this.txt_codigo.TabIndex = 0;
             // 
             // txb_descripcion
             // 
@@ -109,7 +109,7 @@
             this.txb_descripcion.Multiline = true;
             this.txb_descripcion.Name = "txb_descripcion";
             this.txb_descripcion.Size = new System.Drawing.Size(334, 50);
-            this.txb_descripcion.TabIndex = 3;
+            this.txb_descripcion.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -122,7 +122,7 @@
             this.groupBox1.Location = new System.Drawing.Point(368, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(309, 329);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Imagen";
             // 
@@ -144,7 +144,7 @@
             this.btn_borrarImagen.Location = new System.Drawing.Point(127, 20);
             this.btn_borrarImagen.Name = "btn_borrarImagen";
             this.btn_borrarImagen.Size = new System.Drawing.Size(104, 27);
-            this.btn_borrarImagen.TabIndex = 12;
+            this.btn_borrarImagen.TabIndex = 1;
             this.btn_borrarImagen.Text = "Borrar Imagen";
             this.btn_borrarImagen.UseVisualStyleBackColor = true;
             this.btn_borrarImagen.Click += new System.EventHandler(this.btn_borrarImagen_Click);
@@ -156,7 +156,7 @@
             this.btn_cargarImagen.Location = new System.Drawing.Point(7, 20);
             this.btn_cargarImagen.Name = "btn_cargarImagen";
             this.btn_cargarImagen.Size = new System.Drawing.Size(104, 27);
-            this.btn_cargarImagen.TabIndex = 11;
+            this.btn_cargarImagen.TabIndex = 0;
             this.btn_cargarImagen.Text = "Cargar Imagen";
             this.btn_cargarImagen.UseVisualStyleBackColor = true;
             this.btn_cargarImagen.Click += new System.EventHandler(this.btn_cargarImagen_Click);
@@ -168,7 +168,7 @@
             this.txb_precioVenta.MaxLength = 10;
             this.txb_precioVenta.Name = "txb_precioVenta";
             this.txb_precioVenta.Size = new System.Drawing.Size(96, 27);
-            this.txb_precioVenta.TabIndex = 5;
+            this.txb_precioVenta.TabIndex = 6;
             this.txb_precioVenta.Text = "0,00";
             this.txb_precioVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txb_precioVenta.Click += new System.EventHandler(this.txb_precioVenta_Click);
@@ -206,7 +206,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(574, 460);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(103, 40);
-            this.btn_cancelar.TabIndex = 14;
+            this.btn_cancelar.TabIndex = 9;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_cancelar.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
             this.cmb_categoria.Location = new System.Drawing.Point(115, 198);
             this.cmb_categoria.Name = "cmb_categoria";
             this.cmb_categoria.Size = new System.Drawing.Size(173, 26);
-            this.cmb_categoria.TabIndex = 2;
+            this.cmb_categoria.TabIndex = 3;
             this.cmb_categoria.Text = "Seleccione";
             // 
             // label5
@@ -320,7 +320,7 @@
             this.txt_nombre.MaxLength = 30;
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(198, 27);
-            this.txt_nombre.TabIndex = 25;
+            this.txt_nombre.TabIndex = 1;
             // 
             // label7
             // 
@@ -339,7 +339,7 @@
             this.txt_precio_sin_iva.MaxLength = 10;
             this.txt_precio_sin_iva.Name = "txt_precio_sin_iva";
             this.txt_precio_sin_iva.Size = new System.Drawing.Size(96, 27);
-            this.txt_precio_sin_iva.TabIndex = 27;
+            this.txt_precio_sin_iva.TabIndex = 4;
             this.txt_precio_sin_iva.Text = "0,00";
             this.txt_precio_sin_iva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_precio_sin_iva.Click += new System.EventHandler(this.txt_precio_sin_iva_Click);
@@ -352,7 +352,7 @@
             this.txt_precio_con_iva.MaxLength = 10;
             this.txt_precio_con_iva.Name = "txt_precio_con_iva";
             this.txt_precio_con_iva.Size = new System.Drawing.Size(96, 27);
-            this.txt_precio_con_iva.TabIndex = 28;
+            this.txt_precio_con_iva.TabIndex = 5;
             this.txt_precio_con_iva.Text = "0,00";
             this.txt_precio_con_iva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_precio_con_iva.Click += new System.EventHandler(this.txt_precio_con_iva_Click);
