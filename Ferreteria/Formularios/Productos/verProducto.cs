@@ -208,8 +208,8 @@ namespace Ferreteria.Formularios.Productos
 
         private void txb_filtro_KeyUp(object sender, KeyEventArgs e)
         {
-            if (txb_filtro.Text != "")
-            {
+            //if (txb_filtro.Text != "")
+            //{
                 List<Producto> copia = productos.ToList();
                 // m.Name.Contains(key)
                 grilla_productos.DataSource = copia.Where(x => x.nombre.Contains(txb_filtro.Text)).ToList();
@@ -222,7 +222,7 @@ namespace Ferreteria.Formularios.Productos
                 {
                     txb_filtro.BackColor = Color.White;
                 }
-            }
+            //}
         
         }
 
